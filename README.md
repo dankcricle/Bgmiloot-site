@@ -2,23 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <title>BGMiLoots - Cheapest UC Deals</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BGMI Unified Portal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #0f0f0f;
+      background-color: #000;
       color: #facc15;
     }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem;
+    nav {
+      background-color: #111;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
-    h1, h2 {
+    nav img { height: 40px; }
+    nav a {
+      color: #facc15;
+      margin-left: 2rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero-img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      border-bottom: 4px solid #facc15;
+    }
+    section { padding: 2rem; }
+    h1, h2, h3 {
+      font-family: 'Teko', sans-serif;
       text-align: center;
-      color: #fcd34d;
     }
     .grid {
       display: grid;
@@ -27,33 +47,36 @@
       margin-top: 2rem;
     }
     .card {
-      background: linear-gradient(to bottom right, #92400e, #facc15);
-      color: #111;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid #facc15;
       border-radius: 12px;
       padding: 1rem;
       text-align: center;
-      transition: transform 0.2s;
+      transition: transform 0.3s, box-shadow 0.3s;
       cursor: pointer;
-      min-width: 180px;
     }
     .card:hover {
-      transform: scale(1.05);
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+    .card img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
     }
     .button {
       background-color: #000;
       color: #facc15;
       padding: 0.5rem 1rem;
-      border: none;
+      border: 2px solid #facc15;
       border-radius: 6px;
       cursor: pointer;
       margin-top: 1rem;
     }
-    .button:hover {
-      background-color: #d97706;
-    }
-    .hidden {
-      display: none;
-    }
+    .button:hover { background-color: #d97706; }
+    .hidden { display: none; }
     .input {
       width: 100%;
       padding: 0.5rem;
@@ -69,60 +92,102 @@
       border: 4px solid #facc15;
       border-radius: 8px;
       margin: 1rem auto;
+      display: block;
     }
-    .center {
+    footer {
+      background-color: #111;
+      padding: 2rem;
       text-align: center;
+      color: #aaa;
     }
-    #preview {
-      max-width: 256px;
-      margin-top: 10px;
-      display: none;
-      border-radius: 8px;
-      border: 2px dashed #facc15;
+    footer a { color: #facc15; text-decoration: none; }
+    .support-button {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+    }
+    #processingSection {
+      text-align: center;
+      font-size: 1.2rem;
+      padding: 2rem;
     }
   </style>
 </head>
 <body>
+  <nav>
+    <img src="https://i.postimg.cc/GhdQ3SWN/images-2.png" alt="BGMI Logo">
+    <div>
+      <a href="#rewards">🎁 Rewards</a>
+      <a href="#ucdeals">💰 UC Deals</a>
+    </div>
+  </nav>
 
-  <div class="container">
-    <h1>BGMiLoots - Cheapest UC Deals</h1>
-    <p class="center">💸 512 users bought UC today!</p>
+  <img src="https://i.postimg.cc/wTyrJrfB/images-1.jpg" class="hero-img" alt="BGMI Event Banner" />
 
-    <div id="ucSection" class="grid"></div>
+  <section id="rewards">
+    <h1>🎁 Free Rewards</h1>
+    <p style="text-align: center">Collect exclusive daily rewards!</p>
+    <div class="grid">
+      <div class="card"><img src="https://i.postimg.cc/QCxHw5z6/images-3.jpg"><div>Outfit Skin<br><a class="button" href="#qrsection">Collect</a></div></div>
+      <div class="card"><img src="https://i.postimg.cc/kG4gfCVz/images-4.jpg"><div>Crate Coupon<br><a class="button" href="#qrsection">Collect</a></div></div>
+      <div class="card"><img src="https://i.postimg.cc/QxFM7XZW/1725605083-icon-UC-Bundle-11zon.png"><div>500 UC<br><a class="button" href="#qrsection">Collect</a></div></div>
+      <div class="card"><img src="https://i.postimg.cc/gJcz2pKj/images-5.jpg"><div>Voice Pack<br><a class="button" href="#qrsection">Collect</a></div></div>
+      <div class="card"><img src="https://i.postimg.cc/TYb6GhXQ/images-6.jpg"><div>Silver Fragments<br><a class="button" href="#qrsection">Collect</a></div></div>
+    </div>
+  </section>
+
+  <section id="ucdeals">
+    <h1>💰 Buy UC at Best Rates</h1>
+    <p style="text-align: center">🔥 Trusted by 5000+ players</p>
+    <div class="grid" id="ucSection"></div>
 
     <div id="formSection" class="hidden">
-      <h2>Fill Your Details</h2>
+      <h2>Enter Your Details</h2>
       <p id="selectedText"></p>
-      <label for="bgmiId">BGMI ID</label>
-      <input type="text" id="bgmiId" class="input" placeholder="Enter your BGMI ID" />
-      <label for="email">Email</label>
-      <input type="email" id="email" class="input" placeholder="Enter your Email for receipt" />
-      <button class="button" onclick="showQR()">Pay Here</button>
+      <input type="text" id="bgmiId" class="input" placeholder="BGMI ID" />
+      <input type="email" id="email" class="input" placeholder="Email Address" />
+      <button class="button" onclick="showQRSection()">Proceed to Pay</button>
       <button class="button" onclick="resetAll()">← Go Back</button>
     </div>
 
     <div id="qrSection" class="hidden center">
       <h2>Scan & Pay</h2>
       <p>UPI ID: <strong>Dhamapayhere@fam</strong></p>
-      <img src="https://i.postimg.cc/Qdsqz4sX/Screenshot-20250531-204225-Fam-App.jpg" alt="QR code to pay via UPI" class="qr-img" />
-      <p style="font-size: 1.3rem; font-weight: bold;">📸 Take screenshot of QR code and pay by scanning in your payment app</p>
-      <input type="file" accept="image/*" class="input" onchange="previewImage(event)" />
-      <img id="preview" alt="Payment screenshot preview" />
-      <button class="button" onclick="showSuccess()">Submit Payment Screenshot</button>
-      <button class="button" onclick="resetAll()">← Back to Home</button>
+      <img src="https://i.postimg.cc/VNZfvTZF/Screenshot-20250601-131409-Fam-App.jpg" alt="QR Code" class="qr-img" />
+      <p style="text-align: center">Scan the QR code using any UPI app or use the UPI ID above.<br/>Then upload a screenshot as payment proof.</p>
+      <input type="file" class="input" id="paymentScreenshot" accept="image/*" />
+      <button class="button" onclick="showProcessing()">Submit Screenshot</button>
+      <button class="button" onclick="resetAll()">← Back</button>
+    </div>
+
+    <div id="processingSection" class="hidden">
+      <h2>🔄 Processing Your Payment</h2>
+      <p>Please wait while we verify your payment. This usually takes a few seconds...</p>
     </div>
 
     <div id="successSection" class="hidden center">
-      <!-- Filled by JS -->
+      <h2>✅ Payment Successful!</h2>
+      <p>UC will be credited within 10–20 minutes.</p>
+      <p>Keep your email receipt for future reference.</p>
+      <button class="button" onclick="resetAll()">← Home</button>
     </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 BGMI Unified Portal. Not affiliated with KRAFTON or BATTLEGROUNDS MOBILE INDIA.</p>
+    <p><a href="mailto:support@bgmi-portal.com">Contact Support</a></p>
+  </footer>
+
+  <div class="support-button">
+    <button class="button">💬 Chat with Us</button>
   </div>
 
   <script>
     const ucOptions = [
-      { id: 1, uc: 600, price: 200, image: "https://i.postimg.cc/cL5qyxGm/images-1.png" },
-      { id: 2, uc: 2000, price: 500, image: "https://i.postimg.cc/cL5qyxGm/images-1.png" },
-      { id: 3, uc: 4600, price: 1000, image: "https://i.postimg.cc/cL5qyxGm/images-1.png" },
-      { id: 4, uc: 6000, price: 1500, image: "https://i.postimg.cc/cL5qyxGm/images-1.png" },
+      { uc: 600, price: 200 },
+      { uc: 2000, price: 500 },
+      { uc: 4600, price: 1000 },
+      { uc: 6000, price: 1500 },
     ];
 
     let selectedUC = null;
@@ -131,42 +196,38 @@
     const formSection = document.getElementById("formSection");
     const qrSection = document.getElementById("qrSection");
     const successSection = document.getElementById("successSection");
+    const processingSection = document.getElementById("processingSection");
 
     ucOptions.forEach(option => {
       const div = document.createElement("div");
       div.className = "card";
       div.innerHTML = `
-        <img src="${option.image}" alt="${option.uc} UC" width="80" height="80"/>
+        <img src="https://i.postimg.cc/QxFM7XZW/1725605083-icon-UC-Bundle-11zon.png">
         <h3>${option.uc} UC</h3>
-        <p>Rs. ${option.price}</p>
+        <p>Only Rs. ${option.price.toLocaleString("en-IN")}</p>
         <button class="button">Buy Now</button>
       `;
-      div.onclick = () => selectUC(option);
+      div.querySelector(".button").addEventListener("click", (e) => {
+        e.stopPropagation();
+        selectUC(option);
+      });
       ucSection.appendChild(div);
     });
 
     function selectUC(option) {
       selectedUC = option;
-      document.getElementById("selectedText").innerText = `Selected: ${option.uc} UC - Rs. ${option.price}`;
+      document.getElementById("selectedText").innerText = `Selected: ${option.uc} UC - Rs. ${option.price.toLocaleString("en-IN")}`;
       ucSection.classList.add("hidden");
       formSection.classList.remove("hidden");
     }
 
-    function isValidEmail(email) {
-      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    }
+    function showQRSection() {
+      const bgmiId = document.getElementById("bgmiId").value;
+      const email = document.getElementById("email").value;
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    function showQR() {
-      const bgmiId = document.getElementById("bgmiId").value.trim();
-      const email = document.getElementById("email").value.trim();
-
-      if (!bgmiId || !email) {
-        alert("Please enter BGMI ID and Email");
-        return;
-      }
-
-      if (!isValidEmail(email)) {
-        alert("Please enter a valid email address");
+      if (!bgmiId || !email || !emailRegex.test(email)) {
+        alert("Please enter valid BGMI ID and Email.");
         return;
       }
 
@@ -174,45 +235,32 @@
       qrSection.classList.remove("hidden");
     }
 
-    function previewImage(event) {
-      const file = event.target.files[0];
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        const img = document.getElementById("preview");
-        img.src = e.target.result;
-        img.style.display = "block";
-      };
-      if (file) {
-        reader.readAsDataURL(file);
+    function showProcessing() {
+      const file = document.getElementById("paymentScreenshot").files[0];
+      if (!file) {
+        alert("Please upload a screenshot as proof of payment.");
+        return;
       }
-    }
 
-    function showSuccess() {
       qrSection.classList.add("hidden");
-      successSection.classList.remove("hidden");
-      successSection.innerHTML = `
-        <h2>⏳ Processing your payment...</h2>
-        <p>Please wait...</p>
-      `;
+      processingSection.classList.remove("hidden");
+
       setTimeout(() => {
-        successSection.innerHTML = `
-          <h2>✅️ Payment Successful!</h2>
-          <p>Your UC will be delivered in 10–20 minutes.</p>
-          <p>Keep your email receipt safe for support.</p>
-          <button class="button" onclick="resetAll()">← Back to Home</button>
-        `;
-      }, 2000);
+        processingSection.classList.add("hidden");
+        successSection.classList.remove("hidden");
+      }, 3000);
     }
 
     function resetAll() {
       selectedUC = null;
       document.getElementById("bgmiId").value = "";
       document.getElementById("email").value = "";
-      document.getElementById("preview").style.display = "none";
+      document.getElementById("paymentScreenshot").value = "";
       ucSection.classList.remove("hidden");
       formSection.classList.add("hidden");
       qrSection.classList.add("hidden");
       successSection.classList.add("hidden");
+      processingSection.classList.add("hidden");
     }
   </script>
 </body>
