@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BGMiLoots - Futuristic UC Deals</title>
+  <title>BGMiLoots - Cheapest UC Deals</title>
   <style>
     body {
       margin: 0;
@@ -112,10 +112,10 @@
 
   <script>
     const ucOptions = [
-      { id: 1, uc: 600, price: 150, image: "https://i.postimg.cc/3w1pDtQw/images-3.jpg" },
-      { id: 2, uc: 2000, price: 300, image: "https://i.postimg.cc/3w1pDtQw/images-3.jpg" },
-      { id: 3, uc: 4600, price: 700, image: "https://i.postimg.cc/3w1pDtQw/images-3.jpg" },
-      { id: 4, uc: 6000, price: 1000, image: "https://i.postimg.cc/3w1pDtQw/images-3.jpg" },
+      { id: 1, uc: 600, price: 200, image: "https://i.postimg.cc/cL5qyxGm/images-1.png" },
+      { id: 2, uc: 2000, price: 500, image: "https://i.postimg.cc/cL5qyxGm/images-1.png" },
+      { id: 3, uc: 4600, price: 1000, image: "https://i.postimg.cc/cL5qyxGm/images-1.png" },
+      { id: 4, uc: 6000, price: 1500, image: "https://i.postimg.cc/cL5qyxGm/images-1.png" },
     ];
 
     let selectedUC = null;
@@ -178,7 +178,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BGMiLoots - Futuristic UC Deals</title>
+  <title>BGMiLoots - Cheapest UC Deals</title>
   <style>
     body {
       margin: 0;
