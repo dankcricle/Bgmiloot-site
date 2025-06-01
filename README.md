@@ -78,7 +78,7 @@
 <body>
 
   <div class="container">
-    <h1>BGMiLoots - Futuristic UC Deals</h1>
+    <h1>BGMiLoots - cheapest UC Deals</h1>
     <p class="center">💸 512 users bought UC today!</p>
 
     <div id="ucSection" class="grid"></div>
@@ -103,7 +103,7 @@
     </div>
 
     <div id="successSection" class="hidden center">
-      <h2>✅ Payment Successful!</h2>
+      <h2>✅️ Payment Successful!</h2>
       <p>Your UC will be delivered in 10–20 minutes.</p>
       <p>Keep your email receipt safe for support.</p>
       <button class="button" onclick="resetAll()">← Back to Home</button>
@@ -115,7 +115,7 @@
       { id: 1, uc: 600, price: 200, image: "https://i.postimg.cc/cL5qyxGm/images-1.png" },
       { id: 2, uc: 2000, price: 500, image: "https://i.postimg.cc/cL5qyxGm/images-1.png" },
       { id: 3, uc: 4600, price: 1000, image: "https://i.postimg.cc/cL5qyxGm/images-1.png" },
-      { id: 4, uc: 6000, price: 1500, image: "https://i.postimg.cc/cL5qyxGm/images-1.png" },
+      { id: 4, uc: 6000, price: 1500, image: "https://i.postimg.cc/cL5qyxGm/images-1.png },
     ];
 
     let selectedUC = null;
@@ -173,81 +173,3 @@
   </script>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>BGMiLoots - Cheapest UC Deals</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #0f0f0f;
-      color: #facc15;
-    }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem;
-    }
-    h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      color: #fcd34d;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-    .card {
-      background: linear-gradient(to bottom right, #92400e, #facc15);
-      color: #111;
-      border-radius: 12px;
-      padding: 1rem;
-      text-align: center;
-      transition: transform 0.2s;
-      cursor: pointer;
-    }
-    .card:hover {
-      transform: scale(1.05);
-    }
-    .button {
-      background-color: #000;
-      color: #facc15;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      margin-top: 1rem;
-    }
-    .button:hover {
-      background-color: #d97706;
-    }
-    .hidden {
-      display: none;
-    }
-    .input {
-      width: 100%;
-      padding: 0.5rem;
-      margin-bottom: 1rem;
-      border: 2px solid #facc15;
-      border-radius: 6px;
-      background: #111;
-      color: #facc15;
-    }
-    .qr-img {
-      width: 256px;
-      height: 256px;
-      border: 4px solid #facc15;
-      border-radius: 8px;
-      margin: 1rem auto;
-    }
-    .center {
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
